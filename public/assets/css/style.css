@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
 }
 
-#hero .download-btn {
+#hero .get-btn {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 15px;
@@ -377,9 +377,9 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   background: #34558B;
   position: relative;
-}
+}get
 
-#hero .download-btn:hover {
+#hero .get-btn:hover {
   background: #5777ba;
 }
 
@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 8.5px;
 }
 
-#hero .download-btn + .download-btn {
+#hero .get-btn + .get-btn {
   margin-left: 20px;
 }
 
@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
   #hero {
     text-align: center;
   }
-  #hero .download-btn + .download-btn {
+  #hero .get-btn + .get-btn {
     margin: 0 10px;
   }
   #hero .hero-img {
@@ -463,43 +463,100 @@ section {
 /*--------------------------------------------------------------
 # App Features
 --------------------------------------------------------------*/
-.features .content {
+.berita .content {
   padding: 30px 0;
 }
 
-.features .content .icon-box {
+.berita .content .icon-box {
   margin-top: 25px;
 }
 
-.features .content .icon-box h4 {
+.berita .content .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 5px 0 10px 60px;
 }
 
-.features .content .icon-box i {
+.berita .content .icon-box i {
   font-size: 48px;
   float: left;
   color: #5777ba;
 }
 
-.features .content .icon-box p {
+.berita .content .icon-box p {
   font-size: 15px;
   color: #979aa1;
   margin-left: 60px;
 }
 
 @media (max-width: 991px) {
-  .features .image {
+  .berita .image {
     text-align: center;
   }
-  .features .image img {
+  .berita .image img {
     max-width: 80%;
   }
 }
 
 @media (max-width: 667px) {
-  .features .image img {
+  .berita .image img {
+    max-width: 100%;
+  }
+}
+
+
+.berita .content {
+  padding: 30px 0;
+}
+
+.berita .content .icon-box {
+  margin-top: 25px;
+}
+
+.berita .content .icon-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 5px 0 10px 60px;
+}
+
+.berita .card h6 {
+  color: #fff;
+}
+
+.berita .card {
+  background-color: #5777ba;
+  border: none;
+  color: #fff;
+}
+
+.berita .card:hover {
+  background-color: #34558b;
+  color: #fff;
+}
+
+.berita .content .icon-box i {
+  font-size: 48px;
+  float: left;
+  color: #5777ba;
+}
+
+.berita .content .icon-box p {
+  font-size: 15px;
+  color: #979aa1;
+  margin-left: 60px;
+}
+
+@media (max-width: 991px) {
+  .berita .image {
+    text-align: center;
+  }
+  .berita .image img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 667px) {
+  .berita .image img {
     max-width: 100%;
   }
 }
@@ -1199,4 +1256,22 @@ section {
     text-align: center;
     padding: 5px 0;
   }
+}
+
+.hotline .card h5 {
+  color: #fff;
+}
+
+.hotline .card h5:hover {
+  text-decoration: underline;
+}
+
+.hotline .card {
+  background-color: #5777ba;
+  color: #fff;
+  border: none;
+}
+
+.hotline .card:hover {
+  background-color: #34558b;
 }

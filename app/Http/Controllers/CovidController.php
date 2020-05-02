@@ -22,11 +22,9 @@ class CovidController extends Controller
             // var_dump($data["attributes"]);
             
         }
+        
 
         $form_counter = 1;
-        if(isset($lastValueCollection->form_counter)){
-            $form_counter = $lastValueCollection->form_counter + 1;    
-        }
 
         // dd($suspectDataDaerah);
 
@@ -49,21 +47,21 @@ class CovidController extends Controller
 
     public function daerah(){
 
-        // $suspectDaerah = collect(Http::get('https://api.kawalcorona.com/indonesia/provinsi')->json());
-        // $suspecDataDaerah = $suspectDaerah->flatten(1);
+        $suspectDaerah = collect(Http::get('https://api.kawalcorona.com/indonesia/provinsi')->json());
+        $suspecDataDaerah = $suspectDaerah->flatten(1);
         
-        // $labelProvinsi = $suspecDataDaerah->pluck('Provinsi');
-        // $labelPositifDareah = $suspecDataDaerah->pluck('Kasus_Posi');
-        // $colors = $labelProvinsi->map(function($item){
-        //     return '#' . substr(md5(mt_rand()), 0, 6);
-        // });
+        $labelProvinsi = $suspecDataDaerah->pluck('Provinsi');
+        $labelPositifDareah = $suspecDataDaerah->pluck('Kasus_Posi');
+        $colors = $labelProvinsi->map(function($item){
+            return '#' . substr(md5(mt_rand()), 0, 6);
+        });
 
-        // $chartDaerah = new CovidDaerah;
-        // $chartDaerah->labels($labelProvinsi);
-        // $chartDaerah->dataset('Data Kasus Positif di Indonesia', 'doughnut', $labelPositifDareah)->backgroundColor($colors);
+        $chartDaerah = new CovidDaerah;
+        $chartDaerah->labels($labelProvinsi);
+        $chartDaerah->dataset('Data Kasus Positif di Indonesia', 'doughnut', $labelPositifDareah)->backgroundColor($colors);
 
-        // return view('corona', [
-        //     'labelProvinsi' => $labelProvinsi,
-        // ]);
+        return view('chartProvinsi', [
+            'chartDaerah' => $chartDaerah,
+        ]);
     }
 }

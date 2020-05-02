@@ -21,7 +21,7 @@
   }
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
+  $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto, .get-btn', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       e.preventDefault();
       var target = $(this.hash);
@@ -40,7 +40,7 @@
         $('html, body').animate({
           scrollTop: scrollto
         }, 1500, 'easeInOutExpo');
-        if ($(this).parents('.nav-menu, .mobile-nav').length) {
+        if ($(this).parents('.nav-menu, .mobile-nav, .get-btn').length) {
           $('.nav-menu .active, .mobile-nav .active').removeClass('active');
           $(this).closest('li').addClass('active');
         }
